@@ -11,36 +11,20 @@
     <h2>Color Picker</h2>
     <div id="space"></div>
     <div id="picker">
-    <button id="btn1" style="background-color: red; font-size: 20px; font-weight: 500;">Red</button>
-    <button id="btn2" style="background-color: green; font-size: 20px; font-weight: 500;">Green</button>
-    <button id="btn3" style="background-color: gray; font-size: 20px; font-weight: 500;">Gray</button>
-    <button id="btn4" style="background-color: orange; font-size: 20px; font-weight: 500;">Orange</button>
-    <button id="btn5" style="background-color: cadetblue; font-size: 20px; font-weight: 500;">Cadetblue</button>
+
+    <input type="color" id="color" style="margin-top: 10px;">
+    
   </div>
+  <p>Pick any color for the image background</p>
   <script>
-    let button1 = document.getElementById('btn1')
-    let button2 = document.getElementById('btn2')
-    let button3 = document.getElementById('btn3')
-    let button4 = document.getElementById('btn4')
-    let button5 = document.getElementById('btn5')
 
     let space = document.getElementById('space')
-
-    button1.addEventListener('click',() => {
-      space.style.backgroundColor = "red";
+    let color = document.getElementById('color')
+    space.addEventListener('mouseover', () => {
+      let colour = color.value
+      space.style.backgroundColor = colour;
     })
-    button2.addEventListener('click',() => {
-      space.style.backgroundColor = "green";
-    })
-    button3.addEventListener('click',() => {
-      space.style.backgroundColor = "grey";
-    })
-    button4.addEventListener('click',() => {
-      space.style.backgroundColor = "orange";
-    })
-    button5.addEventListener('click',() => {
-      space.style.backgroundColor = "cadetblue";
-    })
+    
   </script>
 </body>
 </html>
